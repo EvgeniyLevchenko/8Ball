@@ -52,7 +52,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="8 Ball" id="hhT-R4-j2C">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="BUe-a3-1ef"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="BUe-a3-1ef">
+                            <connections>
+                                <segue destination="soa-XA-6MF" kind="show" id="d4I-88-MUu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="answerLabel" destination="BUc-c8-pRe" id="tda-Wz-IpN"/>
@@ -61,6 +65,97 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="88.392857142857139"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="xkW-CL-cG1">
+            <objects>
+                <viewController id="soa-XA-6MF" customClass="SettingsViewController" customModule="_Ball" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DVv-hl-xfT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your answer:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EER-pz-Nbv">
+                                <rect key="frame" x="130" y="113" width="154" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer..." textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xQr-UD-DCH">
+                                <rect key="frame" x="20" y="149" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lc0-BS-uQS">
+                                <rect key="frame" x="190" y="191" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="soa-XA-6MF" eventType="touchUpInside" id="B9R-j1-iPE"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="waR-ZC-jEq">
+                                <rect key="frame" x="0.0" y="241" width="414" height="536"/>
+                                <color key="backgroundColor" red="0.81005527209999995" green="0.99093856290000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="536" id="vZo-GJ-rax"/>
+                                </constraints>
+                                <color key="separatorColor" red="0.73402954929999997" green="0.99093856290000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingsTableViewCell" id="TQZ-aP-PZg">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TQZ-aP-PZg" id="diC-BV-C3Q">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.81005527209999995" green="0.99093856290000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eD7-hH-pee">
+                                <rect key="frame" x="155" y="797" width="105" height="30"/>
+                                <state key="normal" title="Delete answers"/>
+                                <connections>
+                                    <action selector="deleteAnswersButtonTapped:" destination="soa-XA-6MF" eventType="touchUpInside" id="cD5-pj-DQT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d9X-He-zvi"/>
+                        <color key="backgroundColor" red="0.81005527209999995" green="0.99093856290000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xQr-UD-DCH" firstAttribute="leading" secondItem="d9X-He-zvi" secondAttribute="leading" constant="20" id="4Id-61-AT5"/>
+                            <constraint firstItem="d9X-He-zvi" firstAttribute="trailing" secondItem="Lc0-BS-uQS" secondAttribute="trailing" constant="190" id="4Yd-Qi-oFu"/>
+                            <constraint firstItem="Lc0-BS-uQS" firstAttribute="leading" secondItem="d9X-He-zvi" secondAttribute="leading" constant="190" id="5mL-Ud-A0A"/>
+                            <constraint firstItem="EER-pz-Nbv" firstAttribute="top" secondItem="d9X-He-zvi" secondAttribute="top" constant="25" id="7PW-BV-Kbt"/>
+                            <constraint firstItem="EER-pz-Nbv" firstAttribute="leading" secondItem="d9X-He-zvi" secondAttribute="leading" constant="130" id="FBT-LR-uew"/>
+                            <constraint firstItem="d9X-He-zvi" firstAttribute="trailing" secondItem="xQr-UD-DCH" secondAttribute="trailing" constant="20" id="J3g-ng-zDz"/>
+                            <constraint firstItem="xQr-UD-DCH" firstAttribute="top" secondItem="EER-pz-Nbv" secondAttribute="bottom" constant="15" id="KyY-bX-1vu"/>
+                            <constraint firstItem="eD7-hH-pee" firstAttribute="leading" secondItem="d9X-He-zvi" secondAttribute="leading" constant="155" id="LZF-20-lkL"/>
+                            <constraint firstItem="d9X-He-zvi" firstAttribute="trailing" secondItem="eD7-hH-pee" secondAttribute="trailing" constant="154" id="Nt4-EU-6TD"/>
+                            <constraint firstItem="waR-ZC-jEq" firstAttribute="top" secondItem="Lc0-BS-uQS" secondAttribute="bottom" constant="20" id="RSu-rr-49k"/>
+                            <constraint firstItem="Lc0-BS-uQS" firstAttribute="top" secondItem="xQr-UD-DCH" secondAttribute="bottom" constant="8" symbolic="YES" id="SVV-I8-ujF"/>
+                            <constraint firstItem="eD7-hH-pee" firstAttribute="top" secondItem="waR-ZC-jEq" secondAttribute="bottom" constant="20" id="eFD-pW-vVW"/>
+                            <constraint firstItem="waR-ZC-jEq" firstAttribute="leading" secondItem="d9X-He-zvi" secondAttribute="leading" id="gxP-4M-Z6u"/>
+                            <constraint firstItem="waR-ZC-jEq" firstAttribute="trailing" secondItem="d9X-He-zvi" secondAttribute="trailing" id="jls-9l-HjW"/>
+                            <constraint firstItem="d9X-He-zvi" firstAttribute="trailing" secondItem="EER-pz-Nbv" secondAttribute="trailing" constant="130" id="oJA-0Y-XfI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EF4-Qf-9kg"/>
+                    <connections>
+                        <outlet property="answerTextField" destination="xQr-UD-DCH" id="WQw-J1-wDD"/>
+                        <outlet property="answersTableView" destination="waR-ZC-jEq" id="8Bu-Or-O39"/>
+                        <outlet property="deleteAnswersButton" destination="eD7-hH-pee" id="VgF-xs-LgF"/>
+                    </connections>
+                </viewController>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add your answer:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vrH-2B-lNI">
+                    <rect key="frame" x="0.0" y="0.0" width="158" height="20.5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4AD-nY-sH6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1876.8115942028987" y="87.723214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gaR-Pp-gBn">

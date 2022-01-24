@@ -17,6 +17,7 @@
 		4B61903F279EE1FE00A8A960 /* MagicAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B61903E279EE1FD00A8A960 /* MagicAnswer.swift */; };
 		4B619041279EE23D00A8A960 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B619040279EE23D00A8A960 /* NetworkManager.swift */; };
 		4B619043279EE2CB00A8A960 /* UserAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B619042279EE2CB00A8A960 /* UserAnswers.swift */; };
+		4B619045279EE6A000A8A960 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B619044279EE6A000A8A960 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4B61903E279EE1FD00A8A960 /* MagicAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicAnswer.swift; sourceTree = "<group>"; };
 		4B619040279EE23D00A8A960 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4B619042279EE2CB00A8A960 /* UserAnswers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAnswers.swift; sourceTree = "<group>"; };
+		4B619044279EE6A000A8A960 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				4B619027279EDCAD00A8A960 /* SceneDelegate.swift */,
 				4B61902B279EDCAD00A8A960 /* Main.storyboard */,
 				4B619039279EDD1000A8A960 /* MainViewController.swift */,
+				4B619044279EE6A000A8A960 /* SettingsViewController.swift */,
 				4B61903B279EE0A700A8A960 /* Model */,
 				4B61902E279EDCAF00A8A960 /* Assets.xcassets */,
 				4B619030279EDCAF00A8A960 /* LaunchScreen.storyboard */,
@@ -164,6 +167,7 @@
 				4B61903F279EE1FE00A8A960 /* MagicAnswer.swift in Sources */,
 				4B619043279EE2CB00A8A960 /* UserAnswers.swift in Sources */,
 				4B61903D279EE0B300A8A960 /* Magic.swift in Sources */,
+				4B619045279EE6A000A8A960 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
