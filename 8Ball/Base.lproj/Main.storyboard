@@ -56,6 +56,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="answerLabel" destination="BUc-c8-pRe" id="tda-Wz-IpN"/>
+                        <outlet property="circleImageView" destination="R4r-Zn-F6s" id="EF6-d5-kSP"/>
+                        <outlet property="triangleImageView" destination="phT-VO-rPU" id="JW3-an-Qtv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
